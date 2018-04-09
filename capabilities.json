@@ -1,0 +1,26 @@
+{
+    "dataRoles": [
+    {
+        "displayName": "Map Url",
+        "name": "values",
+        "kind": "GroupingOrMeasure"
+    },
+    {
+        "displayName": "Layer Name",
+        "name": "layerName",
+        "kind": "GroupingOrMeasure"
+    }
+],
+"dataViewMappings": [{
+    "categorical": {
+        "categories": {
+            "for": { "in": "values" }
+        },
+        "values": {
+            "select": [
+                { "bind": { "to": "layerName" } }
+            ]
+        }
+    }
+}]
+}
